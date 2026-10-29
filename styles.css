@@ -18,6 +18,8 @@ h1 {
 
 main {
   padding: 1rem;
+  height: 60vh;
+  overflow-y: auto;
 }
 
 article {
