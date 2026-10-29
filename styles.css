@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: darkred;
+}
+
+main {
+  padding: 1rem;
+}
+
+article {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+article h2 {
+  margin-top: 0;
+}
