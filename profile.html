@@ -3,22 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile | Tongue Twisted</title>
+    <title>Tongue Twisted | Profile</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <header>
-      <h1>Profile</h1>
+    <header class="site-header">
+      <h1>Tongue Twisted</h1>
     </header>
 
-    <main>
-      <p>Welcome to Tongue Twisted!</p>
+    <main class="main-content profile-content">
+      <section class="profile-card" aria-label="User profile">
+        <div class="profile-heading">
+          <div class="profile-avatar" aria-hidden="true">MD</div>
+          <h2>Max Doe</h2>
+        </div>
+
+        <section class="profile-about">
+          <h3>About me</h3>
+          <p>
+            I love languages, words and discovering interesting expressions from
+            around the world.
+          </p>
+        </section>
+
+        <div class="profile-statistics">
+          <div class="profile-stat">
+            <span aria-hidden="true">❔</span>
+            <span>12</span>
+            <span class="visually-hidden">Questions created</span>
+          </div>
+
+          <div class="profile-stat">
+            <span aria-hidden="true">🔖</span>
+            <span>4</span>
+            <span class="visually-hidden">Bookmarks</span>
+          </div>
+        </div>
+
+        <section class="profile-settings">
+          <h3>Settings</h3>
+
+          <div class="profile-setting">
+            <span>Dark Mode</span>
+            <span class="dark-mode-switch" aria-label="Dark Mode is off">
+              <span></span>
+            </span>
+          </div>
+        </section>
+      </section>
     </main>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="bookmarks.html">Bookmarks</a>
-      <a href="profile.html" aria-current="page">Profile</a>
-    </nav>
+    <!-- Copy the footer navigation from bookmarks.html here.
+       Set aria-current="page" on the Profile link. -->
   </body>
 </html>

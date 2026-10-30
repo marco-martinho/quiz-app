@@ -1,46 +1,498 @@
+/* Global */
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+:root {
   font-family: Arial, sans-serif;
+  color: #3b3b3b;
+  background-color: #f3f5f5;
 }
 
-header {
-  padding: 2rem;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Header */
+
+.site-header {
+  flex-shrink: 0;
+  padding: 1.5rem 1rem;
   text-align: center;
 }
 
-h1 {
-  color: darkred;
+.site-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
 }
 
-main {
+/* Main content */
+
+.main-content {
+  flex: 1;
+  min-height: 0;
   padding: 1rem;
-  height: 60vh;
   overflow-y: auto;
 }
 
-article {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
-article h2 {
+/* Question cards */
+
+.question-card,
+.quiz-end {
+  border: 1px solid #030303;
+  background-color: #edeeee;
+  scroll-margin-top: 1rem;
+}
+
+.question-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.question-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  padding-right: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Language colours */
+
+.language-pt {
+  background-color: #ffffff;
+  color: #0055a4;
+}
+
+.language-es {
+  background-color: #ffd900;
+  color: #c8102e;
+}
+
+.language-fr {
+  background-color: #0055ff;
+  color: #ffffff;
+}
+
+.language-en {
+  background-color: #f52828;
+  color: #001f5b;
+}
+
+.language-de {
+  background-color: #111111;
+  color: #ffdf00;
+}
+
+.language-cross {
+  background-color: #f3a6d8;
+  color: #111111;
+}
+
+/* Language marker beside the question */
+
+.language-marker {
+  display: inline-flex;
+  flex: 0 0 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Answer options */
+
+.question-card fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+  margin: 1rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.question-card legend {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+.question-card fieldset > label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.question-card input[type="radio"] {
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+  accent-color: #0055a4;
+}
+
+/* Decorative bookmark symbols */
+
+.bookmark-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.bookmark-button img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Answer feedback */
+
+.answer-feedback {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #c8caca;
+}
+
+.question-card:has(.answer-option--correct:checked) .answer-feedback--correct,
+.question-card:has(.answer-option--wrong:checked) .answer-feedback--wrong {
+  display: flex;
+}
+
+.answer-feedback p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.answer-feedback--correct p {
+  color: #24743b;
+}
+
+.answer-feedback--wrong p {
+  flex-basis: 100%;
+  color: #b3261e;
+}
+
+/* Language markers at the bottom of each card */
+
+.question-language-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 2.5rem;
+  padding-top: 0.5rem;
+}
+
+.question-language-indicator .language-tab {
+  display: inline-flex;
+  flex: 0 0 1.25rem;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  border: 1px solid transparent;
+  font-size: 0.55rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Current language indicator */
+
+.question-language-indicator .is-current {
+  outline: 3px double #111111;
+  outline-offset: 2px;
+}
+
+/* Quiz ending */
+
+.quiz-end {
+  margin-top: 1rem;
+  padding: 1.5rem 1.25rem;
+}
+
+.quiz-end h2 {
   margin-top: 0;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem;
-  border-top: 1px solid #ccc;
+.quiz-end p {
+  line-height: 1.5;
 }
 
-nav a {
-  color: darkred;
-  text-decoration: none;
+/* Footer */
+
+.site-footer {
+  flex-shrink: 0;
+  border-top: 1px solid #cccccc;
+  background-color: #f3f5f5;
+}
+
+/* Clickable language filters */
+
+.language-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+}
+
+.language-tabs .language-tab {
+  display: inline-flex;
+  flex: 0 0 1.8rem;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 0;
+  border: 1px solid #333333;
+  font-size: 0.65rem;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #cccccc;
+}
+
+.main-navigation a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+}
+
+.main-navigation img {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* Keyboard focus */
+
+button:focus-visible,
+a:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 3px double #111111;
+  outline-offset: 3px;
+}
+
+/* Locked questions */
+
+.question-card + .question-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(243, 245, 245, 0.78);
+  cursor: not-allowed;
+}
+
+.question-card:has(.answer-option--correct:checked) + .question-card::after {
+  display: none;
+}
+
+/* Bookmarks page */
+
+.bookmarks-content {
+  min-height: 60vh;
+}
+
+.bookmarks-list {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+
+.empty-bookmarks-message {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+}
+
+.empty-bookmarks-message p {
+  margin: 0;
+}
+
+/* Small screens */
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 1.1rem 0.75rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.55rem;
+  }
+
+  .main-content {
+    padding: 0.75rem;
+  }
+
+  .question-card {
+    padding: 1rem;
+  }
+
+  .question-title {
+    font-size: 1rem;
+  }
+
+  .language-tabs {
+    gap: 0.55rem;
+    padding: 0.7rem 0.5rem;
+  }
+
+  .language-tabs .language-tab {
+    flex-basis: 1.7rem;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+
+/* Profile page */
+
+.profile-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #030303;
+  background-color: #edeeee;
+}
+
+.profile-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-heading h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  flex-shrink: 0;
+  border: 1px solid #030303;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.profile-about h3,
+.profile-settings h3 {
+  margin-bottom: 0.75rem;
+}
+
+.profile-about p {
+  min-height: 3.5rem;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid #999999;
+  line-height: 1.5;
+}
+
+.profile-statistics {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.profile-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-width: 5.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #030303;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.profile-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.dark-mode-switch {
+  display: flex;
+  align-items: center;
+  width: 3.5rem;
+  height: 1.75rem;
+  padding: 0.2rem;
+  border: 2px solid #030303;
+  border-radius: 2rem;
+}
+
+.dark-mode-switch span {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: #030303;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

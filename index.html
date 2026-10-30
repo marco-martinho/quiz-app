@@ -6,45 +6,489 @@
     <title>Tongue Twisted</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <header>
+    <header class="site-header">
       <h1>Tongue Twisted</h1>
     </header>
 
-    <main>
-      <section aria-label="Quiz questions">
-        <article>
-          <h2>What does "Kummerspeck" mean in German?</h2>
+    <main class="main-content">
+      <section class="question-list" aria-label="Quiz questions">
+        <!-- Question 1: German -->
+        <article class="question-card" id="question-1">
+          <span class="bookmark-button" aria-hidden="true">
+            <img src="assets/ribbon-black .png" alt="" />
+          </span>
 
-          <p hidden>Extra weight gained from emotional eating.</p>
+          <h2 class="question-title">
+            <span class="language-marker language-de" title="German">DE</span>
+            <span>What does the word "Kummerspeck" mean?</span>
+          </h2>
 
-          <button type="button" aria-label="Bookmark this question">☆</button>
+          <fieldset>
+            <legend>Choose your answer:</legend>
+
+            <label>
+              <input
+                type="radio"
+                name="question-1"
+                class="answer-option--wrong"
+              />
+              A type of German bread
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-1"
+                class="answer-option--correct"
+              />
+              Extra weight gained from emotional eating
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-1"
+                class="answer-option--wrong"
+              />
+              A traditional winter coat
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-1"
+                class="answer-option--wrong"
+              />
+              A feeling of homesickness
+            </label>
+
+            <div class="answer-feedback answer-feedback--correct">
+              <p>So right!</p>
+            </div>
+
+            <div class="answer-feedback answer-feedback--wrong">
+              <p>So wrong…</p>
+            </div>
+          </fieldset>
+
+          <div
+            class="question-language-indicator"
+            role="group"
+            aria-label="Language markers"
+          >
+            <span class="language-tab language-pt">PT</span>
+            <span class="language-tab language-es">ES</span>
+            <span class="language-tab language-fr">FR</span>
+            <span class="language-tab language-en">EN</span>
+            <span class="language-tab language-de is-current">DE</span>
+            <span class="language-tab language-cross">?</span>
+          </div>
         </article>
 
-        <article>
-          <h2>What does "sobremesa" mean in Portuguese?</h2>
+        <!-- Question 2: Portuguese -->
+        <article class="question-card" id="question-2">
+          <span class="bookmark-button" aria-hidden="true">
+            <img src="assets/ribbon-black .png" alt="" />
+          </span>
 
-          <p hidden>The time spent talking at the table after a meal.</p>
+          <h2 class="question-title">
+            <span class="language-marker language-pt" title="Portuguese"
+              >PT</span
+            >
+            <span>What does the word "saudade" mean?</span>
+          </h2>
 
-          <button type="button" aria-label="Bookmark this question">☆</button>
+          <fieldset>
+            <legend>Choose your answer:</legend>
+
+            <label>
+              <input
+                type="radio"
+                name="question-2"
+                class="answer-option--wrong"
+              />
+              A celebration with traditional music
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-2"
+                class="answer-option--wrong"
+              />
+              The desire to travel somewhere new
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-2"
+                class="answer-option--correct"
+              />
+              Missing someone or something
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-2"
+                class="answer-option--wrong"
+              />
+              The feeling of being very tired
+            </label>
+
+            <div class="answer-feedback answer-feedback--correct">
+              <p>So right!</p>
+            </div>
+
+            <div class="answer-feedback answer-feedback--wrong">
+              <p>So wrong…</p>
+            </div>
+          </fieldset>
+
+          <div
+            class="question-language-indicator"
+            role="group"
+            aria-label="Language markers"
+          >
+            <span class="language-tab language-pt is-current">PT</span>
+            <span class="language-tab language-es">ES</span>
+            <span class="language-tab language-fr">FR</span>
+            <span class="language-tab language-en">EN</span>
+            <span class="language-tab language-de">DE</span>
+            <span class="language-tab language-cross">?</span>
+          </div>
         </article>
-        <article>
-          <h2>What does "dépaysement" mean in French?</h2>
 
-          <p hidden>
-            The feeling of being somewhere unfamiliar, away from one's usual
-            environment.
-          </p>
+        <!-- Question 3: Spanish -->
+        <article class="question-card" id="question-3">
+          <span class="bookmark-button" aria-hidden="true">
+            <img src="assets/ribbon.png" alt="" />
+          </span>
 
-          <button type="button" aria-label="Bookmark this question">☆</button>
+          <h2 class="question-title">
+            <span class="language-marker language-es" title="Spanish">ES</span>
+            <span>What does the expression "estar en las nubes" mean?</span>
+          </h2>
+
+          <fieldset>
+            <legend>Choose your answer:</legend>
+
+            <label>
+              <input
+                type="radio"
+                name="question-3"
+                class="answer-option--wrong"
+              />
+              To be afraid of heights
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-3"
+                class="answer-option--correct"
+              />
+              To be daydreaming or distracted
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-3"
+                class="answer-option--wrong"
+              />
+              To predict the weather
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-3"
+                class="answer-option--wrong"
+              />
+              To be extremely happy
+            </label>
+
+            <div class="answer-feedback answer-feedback--correct">
+              <p>So right!</p>
+            </div>
+
+            <div class="answer-feedback answer-feedback--wrong">
+              <p>So wrong…</p>
+            </div>
+          </fieldset>
+
+          <div
+            class="question-language-indicator"
+            role="group"
+            aria-label="Language markers"
+          >
+            <span class="language-tab language-pt">PT</span>
+            <span class="language-tab language-es is-current">ES</span>
+            <span class="language-tab language-fr">FR</span>
+            <span class="language-tab language-en">EN</span>
+            <span class="language-tab language-de">DE</span>
+            <span class="language-tab language-cross">?</span>
+          </div>
         </article>
+
+        <!-- Question 4: French -->
+        <article class="question-card" id="question-4">
+          <span class="bookmark-button" aria-hidden="true">
+            <img src="assets/ribbon.png" alt="" />
+          </span>
+
+          <h2 class="question-title">
+            <span class="language-marker language-fr" title="French">FR</span>
+            <span>What does the word "dépaysement" mean?</span>
+          </h2>
+
+          <fieldset>
+            <legend>Choose your answer:</legend>
+
+            <label>
+              <input
+                type="radio"
+                name="question-4"
+                class="answer-option--wrong"
+              />
+              The joy of returning home
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-4"
+                class="answer-option--wrong"
+              />
+              A sudden change in the weather
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-4"
+                class="answer-option--wrong"
+              />
+              The feeling of being disappointed
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-4"
+                class="answer-option--correct"
+              />
+              The feeling of being somewhere unfamiliar
+            </label>
+
+            <div class="answer-feedback answer-feedback--correct">
+              <p>So right!</p>
+            </div>
+
+            <div class="answer-feedback answer-feedback--wrong">
+              <p>So wrong…</p>
+            </div>
+          </fieldset>
+
+          <div
+            class="question-language-indicator"
+            role="group"
+            aria-label="Language markers"
+          >
+            <span class="language-tab language-pt">PT</span>
+            <span class="language-tab language-es">ES</span>
+            <span class="language-tab language-fr is-current">FR</span>
+            <span class="language-tab language-en">EN</span>
+            <span class="language-tab language-de">DE</span>
+            <span class="language-tab language-cross">?</span>
+          </div>
+        </article>
+
+        <!-- Question 5: English -->
+        <article class="question-card" id="question-5">
+          <span class="bookmark-button" aria-hidden="true">
+            <img src="assets/ribbon-black .png" alt="" />
+          </span>
+
+          <h2 class="question-title">
+            <span class="language-marker language-en" title="English">EN</span>
+            <span>What does the word "serendipity" mean?</span>
+          </h2>
+
+          <fieldset>
+            <legend>Choose your answer:</legend>
+
+            <label>
+              <input
+                type="radio"
+                name="question-5"
+                class="answer-option--wrong"
+              />
+              Finding something unpleasant unexpectedly
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-5"
+                class="answer-option--wrong"
+              />
+              Planning something very carefully
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-5"
+                class="answer-option--correct"
+              />
+              Finding something pleasant or valuable by chance
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-5"
+                class="answer-option--wrong"
+              />
+              Remembering something from childhood
+            </label>
+
+            <div class="answer-feedback answer-feedback--correct">
+              <p>So right!</p>
+            </div>
+
+            <div class="answer-feedback answer-feedback--wrong">
+              <p>So wrong…</p>
+            </div>
+          </fieldset>
+
+          <div
+            class="question-language-indicator"
+            role="group"
+            aria-label="Language markers"
+          >
+            <span class="language-tab language-pt">PT</span>
+            <span class="language-tab language-es">ES</span>
+            <span class="language-tab language-fr">FR</span>
+            <span class="language-tab language-en is-current">EN</span>
+            <span class="language-tab language-de">DE</span>
+            <span class="language-tab language-cross">?</span>
+          </div>
+        </article>
+
+        <!-- Question 6: Cross-language -->
+        <article class="question-card" id="question-6">
+          <span class="bookmark-button" aria-hidden="true">
+            <img src="assets/ribbon.png" alt="" />
+          </span>
+
+          <h2 class="question-title">
+            <span class="language-marker language-cross" title="Cross-language"
+              >?</span
+            >
+            <span
+              >In which language does the word for "tea" not begin with the
+              letter "T"?</span
+            >
+          </h2>
+
+          <fieldset>
+            <legend>Choose your answer:</legend>
+
+            <label>
+              <input
+                type="radio"
+                name="question-6"
+                class="answer-option--wrong"
+              />
+              Spanish
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-6"
+                class="answer-option--correct"
+              />
+              Portuguese
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-6"
+                class="answer-option--wrong"
+              />
+              German
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="question-6"
+                class="answer-option--wrong"
+              />
+              English
+            </label>
+
+            <div class="answer-feedback answer-feedback--correct">
+              <p>So right!</p>
+            </div>
+
+            <div class="answer-feedback answer-feedback--wrong">
+              <p>So wrong…</p>
+            </div>
+          </fieldset>
+
+          <div
+            class="question-language-indicator"
+            role="group"
+            aria-label="Language markers"
+          >
+            <span class="language-tab language-pt">PT</span>
+            <span class="language-tab language-es">ES</span>
+            <span class="language-tab language-fr">FR</span>
+            <span class="language-tab language-en">EN</span>
+            <span class="language-tab language-de">DE</span>
+            <span class="language-tab language-cross is-current">?</span>
+          </div>
+        </article>
+
+        <div id="quiz-end" class="quiz-end">
+          <h2>Quiz complete!</h2>
+          <p>Thanks for playing Tongue Twisted.</p>
+        </div>
       </section>
     </main>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="bookmarks.html">Bookmarks</a>
-      <a href="profile.html">Profile</a>
-    </nav>
+    <footer class="site-footer">
+      <nav class="language-tabs" aria-label="Filter by language">
+        <button class="language-tab language-pt" type="button">PT</button>
+        <button class="language-tab language-es" type="button">ES</button>
+        <button class="language-tab language-fr" type="button">FR</button>
+        <button class="language-tab language-en" type="button">EN</button>
+        <button class="language-tab language-de" type="button">DE</button>
+        <button class="language-tab language-cross" type="button">?</button>
+      </nav>
+
+      <nav class="main-navigation" aria-label="Main navigation">
+        <a href="index.html" aria-label="Home" aria-current="page">
+          <img src="assets/home-black.png" alt="" />
+        </a>
+
+        <a href="bookmarks.html" aria-label="Bookmarks">
+          <img src="assets/ribbon.png" alt="" />
+        </a>
+
+        <a href="profile.html" aria-label="Profile">
+          <img src="assets/user.png" alt="" />
+        </a>
+      </nav>
+    </footer>
   </body>
 </html>
