@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tongue Twisted | Profile</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="profile.js" defer></script>
   </head>
 
   <body>
@@ -15,8 +16,12 @@
     <main class="main-content profile-content">
       <section class="profile-card" aria-label="User profile">
         <div class="profile-heading">
-          <div class="profile-avatar" aria-hidden="true">MD</div>
-          <h2>Max Doe</h2>
+          <img
+            class="profile-avatar"
+            src="assets/foto-spicy.jpg"
+            alt="Marco Oliveira"
+          />
+          <h2>MMART</h2>
         </div>
 
         <section class="profile-about">
@@ -45,10 +50,15 @@
           <h3>Settings</h3>
 
           <div class="profile-setting">
-            <span>Dark Mode</span>
-            <span class="dark-mode-switch" aria-label="Dark Mode is off">
-              <span></span>
-            </span>
+            <span class="mode-label">Bright Mode</span>
+            <button
+              class="dark-mode-switch"
+              type="button"
+              aria-label="Toggle dark mode"
+              aria-pressed="false"
+            >
+              <span aria-hidden="true"></span>
+            </button>
           </div>
         </section>
       </section>
@@ -68,7 +78,7 @@
       </nav>
 
       <nav class="main-navigation" aria-label="Main navigation">
-        <a href="index.html" aria-label="Home" aria-current="page">
+        <a href="index.html" aria-label="Home">
           <img src="assets/home.png" alt="" />
         </a>
 
@@ -76,7 +86,7 @@
           <img src="assets/ribbon.png" alt="" />
         </a>
 
-        <a href="profile.html" aria-label="Profile">
+        <a href="profile.html" aria-label="Profile" aria-current="page">
           <img src="assets/user-black.png" alt="" />
         </a>
       </nav>
