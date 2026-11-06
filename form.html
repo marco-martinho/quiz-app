@@ -9,7 +9,7 @@
     <script src="form.js" defer></script>
   </head>
 
-  <body>
+  <body class="form-page">
     <header class="site-header">
       <h1>Tongue Twisted</h1>
     </header>
@@ -27,7 +27,7 @@
             maxlength="150"
             required
           ></textarea>
-          <p class="character-count" id="question-count">0 / 150</p>
+          <p class="character-count" id="question-count">150 characters left</p>
 
           <label for="answer-input">Answer</label>
           <textarea
@@ -37,7 +37,7 @@
             maxlength="150"
             required
           ></textarea>
-          <p class="character-count" id="answer-count">0 / 150</p>
+          <p class="character-count" id="answer-count">150 characters left</p>
 
           <label for="tag-input">Language tag</label>
           <input
@@ -62,6 +62,9 @@
         </a>
         <a href="bookmarks.html" aria-label="Bookmarks">
           <img src="assets/ribbon.png" alt="" />
+        </a>
+        <a href="form.html" aria-label="Add Question">
+          <img src="assets/form-black.png" alt="" />
         </a>
         <a href="profile.html" aria-label="Profile">
           <img src="assets/user.png" alt="" />

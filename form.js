@@ -1,6 +1,25 @@
 const questionForm = document.querySelector("#question-form");
 const submittedQuestions = document.querySelector("#submitted-questions");
 
+// Character counters
+
+const textFields = [
+  {
+    input: document.querySelector("#question-input"),
+    counter: document.querySelector("#question-count"),
+  },
+  {
+    input: document.querySelector("#answer-input"),
+    counter: document.querySelector("#answer-count"),
+  },
+];
+
+textFields.forEach(({ input, counter }) => {
+  input.addEventListener("input", () => {
+    counter.textContent = `${input.maxLength - input.value.length} characters left`;
+  });
+});
+
 questionForm.addEventListener("submit", (event) => {
   event.preventDefault();
 

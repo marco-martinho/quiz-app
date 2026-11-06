@@ -1,30 +1,30 @@
 // Bookmark functionality
 
-const questionList = document.querySelector(".bookmark-list");
+// Find all question cards on the Bookmarks page
+const questionCards = document.querySelectorAll(".question-card");
 
-const savedBookmarks = JSON.parse(
-  localStorage.getItem("bookmarkedQuestions") || "[]",
-);
+// Show and hide answer explanations in each card
+questionCards.forEach((questionCard) => {
+  // Find the answer buttons inside the current card
+  const answerButtons = questionCard.querySelectorAll(".answer-toggle");
 
-fetch("index.html")
-  .then((response) => response.text())
-  .then((html) => {
-    const parser = new DOMParser();
-    const homeDocument = parser.parseFromString(html, "text/html");
+  answerButtons.forEach((button) => {
+    // Listen for clicks on the answer button
+    button.addEventListener("click", () => {
+      // Find the feedback section containing the clicked button
+      const feedback = button.closest(".answer-feedback");
 
-    const homeCards = homeDocument.querySelectorAll(".question-card");
+      // Find the explanation inside that feedback section
+      const answer = feedback.querySelector(".answer-feedback__answer");
 
-    homeCards.forEach((questionCard) => {
-      if (savedBookmarks.includes(questionCard.id)) {
-        questionList.appendChild(questionCard);
-      }
+      // Show or hide the explanation
+      const isHidden = answer.classList.toggle("hidden");
+
+      // Update the button text
+      button.textContent = isHidden ? "show answer" : "hide answer";
+
+      // Update the accessibility state
+      button.setAttribute("aria-expanded", !isHidden);
     });
-
-    if (questionList.children.length === 0) {
-      questionList.innerHTML =
-        "<p>No bookmarks yet. Save a question from Home!</p>";
-    }
-  })
-  .catch((error) => {
-    console.error("Could not load bookmarked questions:", error);
   });
+});

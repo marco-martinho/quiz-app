@@ -190,7 +190,12 @@ body {
   accent-color: #0055a4;
 }
 
-/* Bookmark symbols */
+/* Toggle functionality - Bookmark button
+   HTML: .bookmark-button inside each .question-card in index.html.
+   CSS state: .is-bookmarked changes the icon from black to orange.
+   JavaScript: Click handler toggles .is-bookmarked, updates aria-pressed,
+   and saves the bookmark IDs in localStorage.
+*/
 
 .bookmark-button {
   position: absolute;
@@ -250,7 +255,13 @@ body {
   color: #b3261e;
 }
 
-/* Answer reveal button */
+/* Toggle functionality - Answer button
+   HTML: .answer-toggle inside .answer-feedback__row
+   inside each .question-card in index.html.
+   CSS state: .hidden hides or displays .answer-feedback__answer.
+   JavaScript: Click handler toggles .hidden, changes the button text
+   between "show answer" and "hide answer", and updates aria-expanded.
+*/
 
 .answer-feedback__row {
   display: flex;
@@ -281,6 +292,11 @@ body {
   font-weight: normal;
   line-height: 1.5;
 }
+
+/* Answer button - JavaScript toggle state
+   Used by .answer-toggle to hide or reveal .answer-feedback__answer.
+   The click handler in JavaScript adds or removes this class.
+*/
 
 .hidden {
   display: none !important;
@@ -410,7 +426,7 @@ input[type="radio"]:focus-visible {
 
 /* Locked questions */
 
-.question-card + .question-card::after {
+.home-page .question-card + .question-card::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -446,6 +462,12 @@ input[type="radio"]:focus-visible {
 
 .empty-bookmarks-message p {
   margin: 0;
+}
+
+/* Bookmark icons on Bookmarks page */
+
+.bookmarks-page .bookmark-button img {
+  filter: invert(48%) sepia(94%) saturate(1200%) hue-rotate(5deg);
 }
 
 /* Small screens */
@@ -628,3 +650,22 @@ input[type="radio"]:focus-visible {
 :root.dark-mode .site-footer img {
   filter: brightness(0) invert(1);
 }
+
+/* Form page submitted cards */
+
+.form-page #submitted-questions {
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-page #submitted-questions .question-card {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+/* Form field text counter
+   HTML: #question-input and #answer-input in form.html,
+   with corresponding #question-count and #answer-count paragraphs.
+   JavaScript: form.js listens for the input event and updates
+   the remaining character count (150 characters maximum).
+*/
