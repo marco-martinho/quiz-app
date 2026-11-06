@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tongue Twisted</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="profile.js" defer></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
+  <body class="home-page">
     <header class="site-header">
       <h1>Tongue Twisted</h1>
     </header>
@@ -16,9 +18,14 @@
       <section class="question-list" aria-label="Quiz questions">
         <!-- Question 1: German -->
         <article class="question-card" id="question-1">
-          <span class="bookmark-button" aria-hidden="true">
+          <button
+            class="bookmark-button"
+            type="button"
+            aria-label="Bookmark question"
+            aria-pressed="false"
+          >
             <img src="assets/ribbon-black .png" alt="" />
-          </span>
+          </button>
 
           <h2 class="question-title">
             <span class="language-marker language-de" title="German">DE</span>
@@ -65,11 +72,41 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> "Kummerspeck" combines "Kummer" (grief or
+                worry) and "Speck" (fat or bacon). The expression literally
+                means "grief fat" and humorously describes weight gained through
+                emotional eating.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> "Kummerspeck" combines "Kummer" (grief or
+                worry) and "Speck" (fat or bacon). The expression literally
+                means "grief fat" and humorously describes weight gained through
+                emotional eating.
+              </p>
             </div>
           </fieldset>
 
@@ -89,9 +126,14 @@
 
         <!-- Question 2: Portuguese -->
         <article class="question-card" id="question-2">
-          <span class="bookmark-button" aria-hidden="true">
+          <button
+            class="bookmark-button is-bookmarked"
+            type="button"
+            aria-label="Bookmark question"
+            aria-pressed="true"
+          >
             <img src="assets/ribbon-black .png" alt="" />
-          </span>
+          </button>
 
           <h2 class="question-title">
             <span class="language-marker language-pt" title="Portuguese"
@@ -140,11 +182,41 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> The word is traditionally linked to the
+                Latin "solitatem", meaning solitude. Older Portuguese forms
+                included "soidade" and "suidade". Its modern meaning developed
+                over time to express longing for someone or something absent.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> The word is traditionally linked to the
+                Latin "solitatem", meaning solitude. Older Portuguese forms
+                included "soidade" and "suidade". Its modern meaning developed
+                over time to express longing for someone or something absent.
+              </p>
             </div>
           </fieldset>
 
@@ -164,9 +236,14 @@
 
         <!-- Question 3: Spanish -->
         <article class="question-card" id="question-3">
-          <span class="bookmark-button" aria-hidden="true">
-            <img src="assets/ribbon.png" alt="" />
-          </span>
+          <button
+            class="bookmark-button"
+            type="button"
+            aria-label="Bookmark question"
+            aria-pressed="false"
+          >
+            <img src="assets/ribbon-black .png" alt="" />
+          </button>
 
           <h2 class="question-title">
             <span class="language-marker language-es" title="Spanish">ES</span>
@@ -213,11 +290,45 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> The expression literally means "to be in
+                the clouds". It uses the image of being high above the ground
+                and detached from everyday reality to describe someone whose
+                thoughts are elsewhere. Similar metaphors exist in English ("to
+                have your head in the clouds") and French ("être dans les
+                nuages"). Its precise historical origin is unknown.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> The expression literally means "to be in
+                the clouds". It uses the image of being high above the ground
+                and detached from everyday reality to describe someone whose
+                thoughts are elsewhere. Similar metaphors exist in English ("to
+                have your head in the clouds") and French ("être dans les
+                nuages"). Its precise historical origin is unknown.
+              </p>
             </div>
           </fieldset>
 
@@ -237,9 +348,14 @@
 
         <!-- Question 4: French -->
         <article class="question-card" id="question-4">
-          <span class="bookmark-button" aria-hidden="true">
-            <img src="assets/ribbon.png" alt="" />
-          </span>
+          <button
+            class="bookmark-button is-bookmarked"
+            type="button"
+            aria-label="Bookmark question"
+            aria-pressed="true"
+          >
+            <img src="assets/ribbon-black .png" alt="" />
+          </button>
 
           <h2 class="question-title">
             <span class="language-marker language-fr" title="French">FR</span>
@@ -286,11 +402,43 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> The word comes from "dépayser", formed
+                from "dé-" and "pays" (country or homeland). It originally
+                referred to taking someone away from their own country. Its
+                meaning later expanded to describe the feeling of being
+                disoriented or out of place in an unfamiliar environment.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> The word comes from "dépayser", formed
+                from "dé-" and "pays" (country or homeland). It originally
+                referred to taking someone away from their own country. Its
+                meaning later expanded to describe the feeling of being
+                disoriented or out of place in an unfamiliar environment.
+              </p>
             </div>
           </fieldset>
 
@@ -310,9 +458,14 @@
 
         <!-- Question 5: English -->
         <article class="question-card" id="question-5">
-          <span class="bookmark-button" aria-hidden="true">
+          <button
+            class="bookmark-button is-bookmarked"
+            type="button"
+            aria-label="Bookmark question"
+            aria-pressed="true"
+          >
             <img src="assets/ribbon-black .png" alt="" />
-          </span>
+          </button>
 
           <h2 class="question-title">
             <span class="language-marker language-en" title="English">EN</span>
@@ -359,11 +512,43 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> Horace Walpole coined the word in a letter
+                dated 28 January 1754. He took inspiration from the Persian tale
+                "The Three Princes of Serendip", whose heroes discovered things
+                they weren't looking for through a combination of chance and
+                clever observation. Serendip was an old name for Sri Lanka.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> Horace Walpole coined the word in a letter
+                dated 28 January 1754. He took inspiration from the Persian tale
+                "The Three Princes of Serendip", whose heroes discovered things
+                they weren't looking for through a combination of chance and
+                clever observation. Serendip was an old name for Sri Lanka.
+              </p>
             </div>
           </fieldset>
 
@@ -383,18 +568,23 @@
 
         <!-- Question 6: Cross-language -->
         <article class="question-card" id="question-6">
-          <span class="bookmark-button" aria-hidden="true">
-            <img src="assets/ribbon.png" alt="" />
-          </span>
+          <button
+            class="bookmark-button"
+            type="button"
+            aria-label="Bookmark question"
+            aria-pressed="false"
+          >
+            <img src="assets/ribbon-black .png" alt="" />
+          </button>
 
           <h2 class="question-title">
             <span class="language-marker language-cross" title="Cross-language"
               >?</span
             >
-            <span
-              >In which language does the word for "tea" not begin with the
-              letter "T"?</span
-            >
+            <span>
+              In which language does the word for "tea" not begin with the
+              letter "T"?
+            </span>
           </h2>
 
           <fieldset>
@@ -437,11 +627,47 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> Both "chá" and "tea" originate from the
+                Chinese character 茶. Portuguese traders adopted the Cantonese
+                pronunciation "cha" in Macau during the 16th century. Dutch
+                traders later adopted a pronunciation similar to "te" from the
+                Fujian region, spreading it to languages such as English,
+                French, Spanish and German. The difference reflects two
+                historical trade routes.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> Both "chá" and "tea" originate from the
+                Chinese character 茶. Portuguese traders adopted the Cantonese
+                pronunciation "cha" in Macau during the 16th century. Dutch
+                traders later adopted a pronunciation similar to "te" from the
+                Fujian region, spreading it to languages such as English,
+                French, Spanish and German. The difference reflects two
+                historical trade routes.
+              </p>
             </div>
           </fieldset>
 
@@ -484,7 +710,9 @@
         <a href="bookmarks.html" aria-label="Bookmarks">
           <img src="assets/ribbon.png" alt="" />
         </a>
-
+        <a href="form.html" aria-label="Add Question">
+          <img src="assets/form.png" alt="" />
+        </a>
         <a href="profile.html" aria-label="Profile">
           <img src="assets/user.png" alt="" />
         </a>

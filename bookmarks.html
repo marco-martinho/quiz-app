@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tongue Twisted</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="profile.js" defer></script>
+    <script src="bookmarks.js" defer></script>
   </head>
 
-  <body>
+  <body class="bookmarks-page">
     <header class="site-header">
       <h1>Tongue Twisted</h1>
     </header>
 
     <main class="main-content">
-      <section class="question-list" aria-label="Quiz questions">
+      <section
+        class="question-list bookmark-list"
+        aria-label="Bookmarked questions"
+      >
         <!-- Question 1: German -->
         <article class="question-card" id="question-1">
           <span class="bookmark-button" aria-hidden="true">
@@ -65,11 +70,41 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> "Kummerspeck" combines "Kummer" (grief or
+                worry) and "Speck" (fat or bacon). The expression literally
+                means "grief fat" and humorously describes weight gained through
+                emotional eating.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> "Kummerspeck" combines "Kummer" (grief or
+                worry) and "Speck" (fat or bacon). The expression literally
+                means "grief fat" and humorously describes weight gained through
+                emotional eating.
+              </p>
             </div>
           </fieldset>
 
@@ -140,11 +175,41 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> The word is traditionally linked to the
+                Latin "solitatem", meaning solitude. Older Portuguese forms
+                included "soidade" and "suidade". Its modern meaning developed
+                over time to express longing for someone or something absent.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> The word is traditionally linked to the
+                Latin "solitatem", meaning solitude. Older Portuguese forms
+                included "soidade" and "suidade". Its modern meaning developed
+                over time to express longing for someone or something absent.
+              </p>
             </div>
           </fieldset>
 
@@ -213,11 +278,43 @@
             </label>
 
             <div class="answer-feedback answer-feedback--correct">
-              <p>So right!</p>
+              <div class="answer-feedback__row">
+                <p>So right!</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> Horace Walpole coined the word in a letter
+                dated 28 January 1754. He took inspiration from the Persian tale
+                "The Three Princes of Serendip", whose heroes discovered things
+                they weren't looking for through a combination of chance and
+                clever observation. Serendip was an old name for Sri Lanka.
+              </p>
             </div>
 
             <div class="answer-feedback answer-feedback--wrong">
-              <p>So wrong…</p>
+              <div class="answer-feedback__row">
+                <p>So wrong…</p>
+                <button
+                  class="answer-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  show answer
+                </button>
+              </div>
+              <p class="answer-feedback__answer hidden">
+                <strong>Why?</strong> Horace Walpole coined the word in a letter
+                dated 28 January 1754. He took inspiration from the Persian tale
+                "The Three Princes of Serendip", whose heroes discovered things
+                they weren't looking for through a combination of chance and
+                clever observation. Serendip was an old name for Sri Lanka.
+              </p>
             </div>
           </fieldset>
 
@@ -255,7 +352,9 @@
         <a href="bookmarks.html" aria-label="Bookmarks">
           <img src="assets/ribbon-black .png" alt="" />
         </a>
-
+        <a href="form.html" aria-label="Add Question">
+          <img src="assets/form.png" alt="" />
+        </a>
         <a href="profile.html" aria-label="Profile">
           <img src="assets/user.png" alt="" />
         </a>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tongue Twisted | Add Question</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="profile.js" defer></script>
+    <script src="form.js" defer></script>
+  </head>
+
+  <body class="form-page">
+    <header class="site-header">
+      <h1>Tongue Twisted</h1>
+    </header>
+
+    <main class="main-content">
+      <section class="question-list">
+        <form id="question-form" class="question-card">
+          <h2>Add a question</h2>
+
+          <label for="question-input">Question</label>
+          <textarea
+            id="question-input"
+            name="question"
+            rows="3"
+            maxlength="150"
+            required
+          ></textarea>
+          <p class="character-count" id="question-count">150 characters left</p>
+
+          <label for="answer-input">Answer</label>
+          <textarea
+            id="answer-input"
+            name="answer"
+            rows="3"
+            maxlength="150"
+            required
+          ></textarea>
+          <p class="character-count" id="answer-count">150 characters left</p>
+
+          <label for="tag-input">Language tag</label>
+          <input
+            id="tag-input"
+            name="tag"
+            type="text"
+            placeholder="PT, ES, FR, EN, DE or ?"
+            required
+          />
+
+          <button type="submit">Submit question</button>
+        </form>
+
+        <div id="submitted-questions" class="question-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="main-navigation">
+        <a href="index.html" aria-label="Home">
+          <img src="assets/home.png" alt="" />
+        </a>
+        <a href="bookmarks.html" aria-label="Bookmarks">
+          <img src="assets/ribbon.png" alt="" />
+        </a>
+        <a href="form.html" aria-label="Add Question">
+          <img src="assets/form-black.png" alt="" />
+        </a>
+        <a href="profile.html" aria-label="Profile">
+          <img src="assets/user.png" alt="" />
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>
