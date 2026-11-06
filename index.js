@@ -45,3 +45,20 @@ questionCards.forEach((questionCard) => {
     });
   });
 });
+
+// Quiz completion
+
+// Find Question 6 and the quiz completion box
+const lastQuestion = document.querySelector("#question-6");
+const quizEnd = document.querySelector("#quiz-end");
+
+// Check the answer selected in Question 6
+lastQuestion.addEventListener("change", () => {
+  // Check whether the correct answer is selected
+  const correctAnswer = lastQuestion.querySelector(
+    ".answer-option--correct:checked",
+  );
+
+  // Show the completion box only when Question 6 is answered correctly
+  quizEnd.classList.toggle("hidden", !correctAnswer);
+});

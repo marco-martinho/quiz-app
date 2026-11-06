@@ -548,7 +548,7 @@ input[type="radio"]:focus-visible {
 .profile-about h3,
 .profile-settings h3 {
   margin: 0 0 1rem;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -557,7 +557,7 @@ input[type="radio"]:focus-visible {
 .profile-about p {
   max-width: 550px;
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   line-height: 1.7;
 }
 
@@ -579,6 +579,10 @@ input[type="radio"]:focus-visible {
   border-radius: 0;
 }
 
+.profile-statistics .profile-stat span:first-child {
+  font-size: 0.9rem;
+}
+
 .profile-stat > span:nth-child(2) {
   font-size: 2.5rem;
   font-weight: bold;
@@ -592,6 +596,10 @@ input[type="radio"]:focus-visible {
 .profile-settings {
   padding-top: 1.5rem;
   border-top: 1px solid var(--field-border);
+}
+
+.mode-label {
+  font-size: 0.9rem;
 }
 
 .profile-setting {
@@ -661,6 +669,171 @@ input[type="radio"]:focus-visible {
 .form-page #submitted-questions .question-card {
   width: 100%;
   flex: 0 0 auto;
+}
+
+/* Form page */
+
+#question-form h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Form labels */
+
+#question-form label {
+  font-weight: bold;
+}
+
+/* Character counter */
+
+#question-form .character-count {
+  margin: 0.4rem 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Form input fields */
+
+#question-form textarea,
+#question-form input {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Language tag on submitted questions */
+
+.form-page .language-marker {
+  background-color: #d0d0d0;
+  color: #3b3b3b;
+}
+
+/* Submit button */
+
+#question-form button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  background-color: #04f61d;
+  color: #060606;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Submitted question cards on the Form page */
+
+.form-page #submitted-questions .question-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Language square */
+
+.form-page #submitted-questions .language-marker {
+  background-color: #d0d0d0;
+  color: #3b3b3b;
+  margin-bottom: 0.25rem;
+}
+
+/* Submitted question */
+
+.form-page #submitted-questions .question-title {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Submitted answer */
+
+.form-page #submitted-questions .question-card p {
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+}
+
+/* Quiz completion box */
+
+.quiz-end {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Keep the completion text above the falling stars */
+
+.quiz-end h2,
+.quiz-end p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide the completion box until Question 6 is answered correctly */
+
+.quiz-end.hidden {
+  display: none;
+}
+
+/* Falling stars */
+
+.quiz-star {
+  position: absolute;
+  top: -1.5rem;
+  color: #d4af37;
+  font-size: 1.2rem;
+  pointer-events: none;
+  animation: falling-stars 4s linear infinite;
+}
+
+/* Give each star a different position and animation delay */
+
+.quiz-star:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.quiz-star:nth-child(2) {
+  left: 25%;
+  animation-delay: 1.5s;
+}
+
+.quiz-star:nth-child(3) {
+  left: 43%;
+  animation-delay: 0.7s;
+}
+
+.quiz-star:nth-child(4) {
+  left: 62%;
+  animation-delay: 2s;
+}
+
+.quiz-star:nth-child(5) {
+  left: 78%;
+  animation-delay: 1s;
+}
+
+.quiz-star:nth-child(6) {
+  left: 92%;
+  animation-delay: 2.5s;
+}
+
+/* Animate the stars falling inside the box */
+
+@keyframes falling-stars {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(12rem) rotate(180deg);
+    opacity: 0;
+  }
 }
 
 /* Form field text counter
